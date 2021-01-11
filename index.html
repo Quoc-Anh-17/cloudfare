@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <div class="item">One</div>
-        <div class="item">One</div>
-        <div class="item">One</div>
-        <input type="range" name="" id="" max=200 min=50 m>
-    </div>
-</body>
+<html>
+  <head>
+    <title>Popper Tutorial</title>
+  </head>
+  <body>
+    <button id="button" aria-describedby="tooltip">My button</button>
+    <div id="tooltip" role="tooltip">My tooltip</div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script>
+      const button = document.querySelector('#button');
+      const tooltip = document.querySelector('#tooltip');
+
+      let instance = Popper.createPopper(button, tooltip);
+      console.log(instance)
+    </script>
+  </body>
 </html>
