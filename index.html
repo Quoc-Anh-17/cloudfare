@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Popper Tutorial</title>
-  </head>
-  <body>
-    <button id="button" aria-describedby="tooltip">My button</button>
-    <div id="tooltip" role="tooltip">My tooltip</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 40px;
+            height: 40px;
+            background: yellow;
+            animation: change 5s linear 0s 1 forwards normal;
+        }
+        @keyframes change {
+            to {background: blue;}
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
 
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    </div>
     <script>
-      const button = document.querySelector('#button');
-      const tooltip = document.querySelector('#tooltip');
-
-      let instance = Popper.createPopper(button, tooltip);
-      console.log(instance)
+        const item = document.querySelector(".item")
+        item.addEventListener("click", () => {
+            
+        })
     </script>
-  </body>
+</body>
 </html>
